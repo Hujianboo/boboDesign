@@ -1,29 +1,19 @@
 import React from "react";
 import Button, { ButtonType, ButtonSize } from "./components/Button/button";
+import Alert, { AlertType } from "./components/Alert/alert";
+
 function App() {
   return (
     <div className="App">
-      <Button
-        onClick={() => {
-          alert("hello");
+      <Alert
+        title="alert"
+        description="description"
+        type={AlertType.Success}
+        closable
+        onClose={() => {
+          // alert("close");
         }}
-      >
-        Hello
-      </Button>
-      <Button disabled> Disabled Button</Button>
-      <Button btnType={ButtonType.Primary} size={ButtonSize.Large}>
-        Large Primary
-      </Button>
-      <Button btnType={ButtonType.Danger} size={ButtonSize.Small}>
-        Small Danger
-      </Button>
-      <Button btnType={ButtonType.Primary} size={ButtonSize.Large}>
-        Large Primary
-      </Button>
-      <Button btnType={ButtonType.Link} href="http://www.baidu.com">
-        {" "}
-        Baidu Link{" "}
-      </Button>
+      ></Alert>
     </div>
   );
 }
