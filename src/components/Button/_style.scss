@@ -18,7 +18,7 @@
   box-shadow: $btn-box-shadow;
   cursor: pointer;
   transition: $btn-transition;
-  &.disabled,
+  & .disabled,
   &[disabled] {
     cursor: not-allowed;
     opacity: $btn-disabled-opacity;
