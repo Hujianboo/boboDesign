@@ -7,13 +7,40 @@ function App() {
     <div className="App">
       <Alert
         title="alert"
-        description="description"
+        description="Success"
         type={AlertType.Success}
         closable
         onClose={() => {
           // alert("close");
         }}
-      ></Alert>
+      />
+      <Alert
+        title="alert"
+        description="Danger"
+        type={AlertType.Danger}
+        closable
+        onClose={() => {
+          // alert("close");
+        }}
+      />
+      <Alert
+        title="alert"
+        description="Default"
+        type={AlertType.Default}
+        closable
+        onClose={() => {
+          // alert("close");
+        }}
+      />
+      <Alert
+        title="alert"
+        description="Warning"
+        type={AlertType.Warning}
+        closable
+        onClose={() => {
+          // alert("close");
+        }}
+      />
     </div>
   );
 }

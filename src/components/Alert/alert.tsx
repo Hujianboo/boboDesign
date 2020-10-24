@@ -26,7 +26,7 @@ const Alert: React.FC<AlertProps> = (props) => {
   const classes = classNames("bobo-alert", {
     [`bobo-alert-${type}`]: type,
   });
-  const titleClass = classNames("viking-alert-title", {
+  const titleClass = classNames("bobo-alert-title", {
     "bold-title": description,
   });
   const handleClose = () => {
