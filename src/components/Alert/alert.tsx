@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import classNames from "classnames";
 
-interface AlertProps {
+export interface AlertProps {
   // 标题
   title: string;
   // 描述
@@ -44,7 +44,7 @@ const Alert: React.FC<AlertProps> = (props) => {
             {description && <p className="bobo-alert-desc">{description}</p>}
             {closable && (
               <span className="bobo-alert-close" onClick={handleClose}>
-                <span>关闭</span>
+                <span>{"close"}</span>
               </span>
             )}
           </div>
@@ -52,5 +52,8 @@ const Alert: React.FC<AlertProps> = (props) => {
       )}
     </div>
   );
+};
+Alert.defaultProps = {
+  closable: true,
 };
 export default Alert;
