@@ -1,6 +1,5 @@
 import React, { createContext, useState } from "react";
 import classNames from "classnames";
-import { lookup } from "dns";
 
 type MenuMode = "horizontal" | "vertical";
 type SelectCallback = (selectedIndex: number) => void;
