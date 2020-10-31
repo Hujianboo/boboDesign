@@ -11,7 +11,7 @@ function App() {
         onSelect={(index) => {
           alert(index);
         }}
-        // mode={"vertical"}
+        mode={"vertical"}
       >
         <MenuItem>menuitem</MenuItem>
         <MenuItem>menuitem</MenuItem>

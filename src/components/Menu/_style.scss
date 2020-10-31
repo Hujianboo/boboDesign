@@ -57,6 +57,10 @@
     left: 0;
     top: calc(100% + 8px);
     border: $menu-border-width solid $menu-border-color;
+    display: none;
+    &.menu-opend {
+      display: block;
+    }
   }
 }
 .menu-vertical {
@@ -64,12 +68,18 @@
   border-bottom: 0px;
   margin: 10px 20px;
   border-right: $menu-border-width solid $menu-border-color;
-  .menu-item {
+  > .menu-item {
     border-left: $menu-item-active-border-width solid transparent;
     &.is-active,
     &:hover {
       border-bottom: 0px;
       border-left: $menu-item-active-border-width solid $menu-item-active-color;
+    }
+  }
+  .bobo-submenu {
+    display: none;
+    &.menu-opend {
+      display: block;
     }
   }
 }
