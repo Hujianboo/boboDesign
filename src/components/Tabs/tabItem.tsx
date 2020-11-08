@@ -1,7 +1,7 @@
 import React, { Children, useState, FunctionComponentElement } from "react";
 
 export interface tabItemProps {
-  label: string;
+  label: string | React.ReactElement;
   disable?: boolean;
   className?: string;
 }

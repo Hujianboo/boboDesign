@@ -37,6 +37,7 @@ function App() {
           sd
         </TabItem>
         <TabItem label="sddf">sdsf</TabItem>
+        <TabItem label={<button>button</button>}>sdsf</TabItem>
       </Tabs>
     </div>
   );
