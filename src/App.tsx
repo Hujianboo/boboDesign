@@ -4,6 +4,8 @@ import Alert, { AlertType } from "./components/Alert/alert";
 import Menu from "./components/Menu/menu";
 import MenuItem from "./components/Menu/menuItem";
 import SubMenu from "./components/Menu/subMenu";
+import Tabs from "./components/Tabs/tabs";
+import TabItem from "./components/Tabs/tabItem";
 function App() {
   return (
     <div className="App">
@@ -11,7 +13,7 @@ function App() {
         onSelect={(index) => {
           alert(index);
         }}
-        mode={"vertical"}
+        // mode={"vertical"}
       >
         <MenuItem>menuitem</MenuItem>
         <MenuItem>menuitem</MenuItem>
@@ -22,6 +24,20 @@ function App() {
         </SubMenu>
         <MenuItem>menuitem</MenuItem>
       </Menu>
+      <Tabs defaultIndex="0" type="card">
+        <TabItem label="sdf">sdf</TabItem>
+        <TabItem label="sd" disable>
+          sd
+        </TabItem>
+        <TabItem label="sddf">sdsf</TabItem>
+      </Tabs>
+      <Tabs defaultIndex="0" type="line">
+        <TabItem label="sdf">sdf</TabItem>
+        <TabItem label="sd" disable>
+          sd
+        </TabItem>
+        <TabItem label="sddf">sdsf</TabItem>
+      </Tabs>
     </div>
   );
 }

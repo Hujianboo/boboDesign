@@ -224,3 +224,15 @@ $menu-item-padding-x: 1rem !default;
 $menu-item-active-color: $primary !default;
 $menu-item-active-border-width: 2px !default;
 $menu-item-disabled-color: $gray-600 !default;
+
+// Navs
+$nav-tabs-link-active-bg: $body-bg !default;
+
+$nav-link-padding-y: 0.5rem !default;
+$nav-link-padding-x: 1rem !default;
+$nav-link-disabled-color: $gray-600 !default;
+$nav-link-active-color: $primary !default;
+$nav-link-border-width: 2px !default;
+$nav-link-card-active-border-color: $border-color $border-color
+  $nav-tabs-link-active-bg $border-color;
+$nav-link-card-active-border-width: $nav-link-border-width;
