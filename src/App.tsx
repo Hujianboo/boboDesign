@@ -6,6 +6,7 @@ import MenuItem from "./components/Menu/menuItem";
 import SubMenu from "./components/Menu/subMenu";
 import Tabs from "./components/Tabs/tabs";
 import TabItem from "./components/Tabs/tabItem";
+import Icon from "./components/Icon/icon";
 function App() {
   return (
     <div className="App">
@@ -25,20 +26,23 @@ function App() {
         <MenuItem>menuitem</MenuItem>
       </Menu>
       <Tabs defaultIndex="0" type="card">
-        <TabItem label="sdf">sdf</TabItem>
-        <TabItem label="sd" disable>
-          sd
+        <TabItem label="first">first</TabItem>
+        <TabItem label="disable" disable>
+          disable
         </TabItem>
-        <TabItem label="sddf">sdsf</TabItem>
+        <TabItem label="third">third</TabItem>
       </Tabs>
       <Tabs defaultIndex="0" type="line">
-        <TabItem label="sdf">sdf</TabItem>
-        <TabItem label="sd" disable>
-          sd
+        <TabItem label="first">first</TabItem>
+        <TabItem label="disable" disable>
+          disable
         </TabItem>
-        <TabItem label="sddf">sdsf</TabItem>
-        <TabItem label={<button>button</button>}>sdsf</TabItem>
+        <TabItem label="third">third</TabItem>
+        <TabItem label={<button>button</button>}>button</TabItem>
       </Tabs>
+      <div>
+        <Icon icon="arrow-down" size="10x" theme="primary"></Icon>
+      </div>
     </div>
   );
 }
