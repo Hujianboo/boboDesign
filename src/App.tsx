@@ -41,7 +41,7 @@ function App() {
         <TabItem label={<button>button</button>}>button</TabItem>
       </Tabs>
       <div>
-        <Icon icon="arrow-down" size="10x" theme="primary"></Icon>
+        <Icon icon="angle-down" theme="primary"></Icon>
       </div>
     </div>
   );
