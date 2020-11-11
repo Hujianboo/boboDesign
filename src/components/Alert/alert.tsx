@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import classNames from "classnames";
-
+import Icon from "../Icon/icon";
+import Transition from "../Transition/transition";
 export interface AlertProps {
   // 标题
   title: string;
@@ -31,26 +32,22 @@ const Alert: React.FC<AlertProps> = (props) => {
   });
   const handleClose = () => {
     if (onClose) {
-      onClose();
+      // onClose();
+      setHide(!hide);
     }
-    setHide(true);
   };
   return (
-    <div>
-      {!hide && (
-        <div>
-          <div className={classes}>
-            <span className={titleClass}>{title}</span>
-            {description && <p className="bobo-alert-desc">{description}</p>}
-            {closable && (
-              <span className="bobo-alert-close" onClick={handleClose}>
-                <span>{"close"}</span>
-              </span>
-            )}
-          </div>
-        </div>
-      )}
-    </div>
+    <Transition in={!hide} timeout={300} classNames="zoom-in-top" wrapper>
+      <div className={classes}>
+        <span className={titleClass}>{title}</span>
+        {description && <p className="bobo-alert-desc">{description}</p>}
+        {closable && (
+          <span className="bobo-alert-close" onClick={handleClose}>
+            <Icon icon="times-circle"></Icon>
+          </span>
+        )}
+      </div>
+    </Transition>
   );
 };
 Alert.defaultProps = {

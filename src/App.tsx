@@ -11,6 +11,10 @@ import Transition from "./components/Transition/transition";
 function App() {
   const [show, setShow] = useState(false);
   const nodeRef = React.useRef(null);
+  const [alertFlag, setAlertFlag] = useState(false);
+  const alertFunc = () => {
+    setAlertFlag(!alertFlag);
+  };
   return (
     <div className="App">
       <Menu
@@ -72,6 +76,12 @@ function App() {
       <Transition in={show} timeout={300} animation="zoom-in-top" wrapper>
         <Button>A Large Button </Button>
       </Transition>
+      <Alert
+        title="test"
+        description="Alert"
+        type={AlertType.Success}
+        onClose={alertFunc}
+      ></Alert>
     </div>
   );
 }
