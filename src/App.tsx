@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Button, { ButtonType, ButtonSize } from "./components/Button/button";
 import Alert, { AlertType } from "./components/Alert/alert";
 import Menu from "./components/Menu/menu";
@@ -7,7 +7,10 @@ import SubMenu from "./components/Menu/subMenu";
 import Tabs from "./components/Tabs/tabs";
 import TabItem from "./components/Tabs/tabItem";
 import Icon from "./components/Icon/icon";
+import Transition from "./components/Transition/transition";
 function App() {
+  const [show, setShow] = useState(false);
+  const nodeRef = React.useRef(null);
   return (
     <div className="App">
       <Menu
@@ -40,9 +43,35 @@ function App() {
         <TabItem label="third">third</TabItem>
         <TabItem label={<button>button</button>}>button</TabItem>
       </Tabs>
-      <div>
-        <Icon icon="angle-down" theme="primary"></Icon>
-      </div>
+      <Button
+        onClick={() => {
+          setShow(!show);
+        }}
+      >
+        toggle
+      </Button>
+      <Transition in={show} timeout={300} animation="zoom-in-top" wrapper>
+        <div>
+          <p>
+            Edit <code>src/App.tsx</code> and save to reload.
+          </p>
+          <p>
+            Edit <code>src/App.tsx</code> and save to reload.
+          </p>
+          <p>
+            Edit <code>src/App.tsx</code> and save to reload.
+          </p>
+          <p>
+            Edit <code>src/App.tsx</code> and save to reload.
+          </p>
+          <p>
+            Edit <code>src/App.tsx</code> and save to reload.
+          </p>
+        </div>
+      </Transition>
+      <Transition in={show} timeout={300} animation="zoom-in-top" wrapper>
+        <Button>A Large Button </Button>
+      </Transition>
     </div>
   );
 }
