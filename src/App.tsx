@@ -79,7 +79,7 @@ function App() {
       <Alert
         title="test"
         description="Alert"
-        type={AlertType.Success}
+        type={"success"}
         onClose={alertFunc}
       ></Alert>
     </div>

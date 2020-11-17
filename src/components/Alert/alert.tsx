@@ -3,26 +3,36 @@ import classNames from "classnames";
 import Icon from "../Icon/icon";
 import Transition from "../Transition/transition";
 export interface AlertProps {
-  // 标题
+  /**
+   * title
+   */
   title: string;
-  // 描述
+  /**
+   * description
+   */
   description?: string;
-  // 类型
+  /**
+   * type
+   */
   type?: AlertType;
-  // 关闭时触发的事件
+  /**
+   * onClose
+   */
   onClose?: () => void;
-  // 是否显示关闭图标
+  /**
+   * closable
+   */
   closable?: boolean;
 }
-export enum AlertType {
-  Success = "success",
-  Default = "default",
-  Danger = "danger",
-  Warning = "warning",
-}
+export type AlertType = "success" | "default" | "danger" | "warning";
 
-const Alert: React.FC<AlertProps> = (props) => {
-  const { title, description, type, onClose, closable } = props;
+const Alert: React.FC<AlertProps> = ({
+  title,
+  description,
+  type,
+  onClose,
+  closable,
+}) => {
   const [hide, setHide] = useState(false);
   const classes = classNames("bobo-alert", {
     [`bobo-alert-${type}`]: type,

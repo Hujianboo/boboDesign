@@ -1,7 +1,7 @@
 import React from "react";
 import { render } from "@testing-library/react";
 import fireEvent from "@testing-library/user-event";
-import Alert, { AlertType, AlertProps } from "./alert";
+import Alert, { AlertProps } from "./alert";
 
 const testProps: AlertProps = {
   title: "title",
@@ -9,7 +9,7 @@ const testProps: AlertProps = {
 };
 const typeProps: AlertProps = {
   ...testProps,
-  type: AlertType.Success,
+  type: "success",
   description: "hello",
   closable: false,
 };

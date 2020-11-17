@@ -22,7 +22,7 @@ const SubMenu: React.FC<SubMenuProps> = (props) => {
     clearTimeout(timer);
     timer = setTimeout(() => {
       setOpened(flag);
-    }, 500);
+    }, 300);
   };
   const clickEvent =
     context.mode === "vertical"

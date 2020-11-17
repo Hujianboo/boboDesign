@@ -10,6 +10,7 @@
     padding: $menu-item-padding-y $menu-item-padding-x;
     cursor: pointer;
     transition: $menu-transition;
+    margin-bottom: -$menu-item-active-border-width;
     &:hover,
     &:focus {
       text-decoration: none;
@@ -29,6 +30,7 @@
 
   .submenu-item {
     position: relative;
+    // margin-bottom: -$menu-item-active-border-width;
     .submenu-title {
       display: flex;
       align-items: center;
@@ -47,6 +49,7 @@
     list-style: none;
     padding-left: 0;
     white-space: nowrap;
+    margin-bottom: -$menu-item-active-border-width;
     .menu-item {
       padding: $menu-item-padding-y $menu-item-padding-x;
       cursor: pointer;
@@ -60,15 +63,15 @@
   }
 }
 .menu-horizontal {
-  .menu-item {
-    // border-bottom: ;
+  > .menu-item {
+    border-bottom: $menu-item-active-border-width solid transparent;
   }
   .bobo-submenu {
     position: absolute;
     background: $white;
     z-index: 99;
     left: 0;
-    top: calc(100% + 8px);
+    top: calc(100%);
     border: $menu-border-width solid $menu-border-color;
     // display: none;
     &.menu-opend {
