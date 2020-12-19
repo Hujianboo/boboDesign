@@ -8,6 +8,7 @@ import Tabs from "./components/Tabs/tabs";
 import TabItem from "./components/Tabs/tabItem";
 import Icon from "./components/Icon/icon";
 import Transition from "./components/Transition/transition";
+import Toggle from "./components/Toggle/toggle";
 function App() {
   const [show, setShow] = useState(false);
   const nodeRef = React.useRef(null);
@@ -82,6 +83,7 @@ function App() {
         type={"success"}
         onClose={alertFunc}
       ></Alert>
+      <Toggle></Toggle>
     </div>
   );
 }
